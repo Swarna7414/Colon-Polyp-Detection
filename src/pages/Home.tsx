@@ -22,14 +22,15 @@ const Home = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-32 sm:pt-24">
         <div className="space-y-8">
           <div className="space-y-4">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              <span className="block bg-gradient-to-r dark:text-white text-blue-500 bg-clip-text">
-                Liver Cirrosis
+            <h1 className="md:text-6xl lg:text-7xl font-bold leading-tight">
+              <span className="text-5xl block bg-gradient-to-r dark:text-white text-blue-500 bg-clip-text">
+                AI-Powered Colon Polyp Detection & Segmentation
               </span>
+              <br />
             </h1>
             <div className="mt-6">
-              <p className="text-xl md:text-2xl dark:text-gray-300 text-gray-500 max-w-4xl mx-auto">
-                  Transforming liver care through AI-driven analysis, our system processes liver scans to deliver fast, accurate cirrhosis detection and diagnostic insights.
+              <p className="text-md md:text-2xl dark:text-gray-300 text-gray-500 max-w-4xl mx-auto">
+                  Advancing colorectal care with AI, our system analyzes colonoscopy frames to provide rapid, reliable polyp detection and high-quality segmentation.
               </p>
             </div>
           </div>

@@ -89,29 +89,29 @@ const Services = () => {
               </div>
             </div>
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-5">
-                Driven by<span className="text-blue-600"> Medical Imaging</span>
+              <h2 className="text-4xl md:text-4xl font-bold mb-5">
+                Driven by <span className="text-blue-600 ">Colonoscopy Imaging</span>
               </h2>
               <div className="grid grid-cols-2 gap-8 mt-12">
                 <div className="text-center">
                   <RiCpuLine className="h-16 w-16 text-blue-600 mx-auto mb-4" />
                   <h3 className="text-lg font-bold mb-3">PVT-Based Encoding</h3>
-                  <p className="text-base text-muted-foreground">Pretrained Pyramid Vision Transformer for Hierarchical Feature Extraction</p>
+                  <p className="text-base text-muted-foreground">Pretrained Pyramid Vision Transformer captures multi-scale mucosal and polyp features.</p>
                 </div>
                 <div className="text-center">
                   <BiGitMerge className="h-16 w-16 text-purple-600 mx-auto mb-4" />
-                  <h3 className="text-lg font-bold mb-3">Refined Decoding</h3>
-                  <p className="text-base text-muted-foreground">Hierarchical Multi-scale Fusion</p>
+                  <h3 className="text-lg font-bold mb-3">Refined Segmentation Decoding</h3>
+                  <p className="text-base text-muted-foreground">Hierarchical fusion improves the precision of polyp boundaries, even in challenging conditions.</p>
                 </div>
                 <div className="text-center">
                   <FiRefreshCcw className="h-16 w-16 text-green-600 mx-auto mb-4" />
                   <h3 className="text-lg font-bold mb-3">Residual Learning</h3>
-                  <p className="text-base text-muted-foreground">Enhanced Feature Representation</p>
+                  <p className="text-base text-muted-foreground">Deep residual blocks enhance recognition of subtle, flat, and low-contrast polyps.</p>
                 </div>
                 <div className="text-center">
                   <MdInsights className="h-16 w-16 text-orange-600 mx-auto mb-4" />
-                  <h3 className="text-lg font-bold mb-3">Proven Clinical Accuracy</h3>
-                  <p className="text-base text-muted-foreground">Benchmark-Tested Performance.</p>
+                  <h3 className="text-lg font-bold mb-3">Robust Clinical Performance</h3>
+                  <p className="text-base text-muted-foreground">Benchmark-tested on diverse multi-centre colonoscopy datasets for reliable, generalizable results.</p>
                 </div>
               </div>
             </div>

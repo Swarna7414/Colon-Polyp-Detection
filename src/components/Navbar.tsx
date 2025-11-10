@@ -32,10 +32,10 @@ const Navbar = () => {
             <img 
               src={Logo}
               alt="DentiMap Logo" 
-              className="h-12 w-15 mt-0.5"
+              className="h-16 w-16 mt-0.5"
             />
             <span className="text-2xl font-bold bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
-              Liver Cirrosis
+              Colon Polyp Detection
             </span>
           </Link>
 
