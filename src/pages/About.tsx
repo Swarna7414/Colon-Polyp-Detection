@@ -61,8 +61,8 @@ const About = () => {
             Meet Our <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">Team</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            Passionate innovators dedicated to revolutionizing liver disease diagnosis through advanced deep learning and medical imaging technology.
-          </p>
+            Passionate innovators dedicated to integrating AI into healthcare through advanced deep learning and medical imaging technologies.
+            </p>
         </div>
       </div>
 
@@ -159,19 +159,18 @@ const About = () => {
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-4xl md:text-6xl font-bold mb-8">Our <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">Mission</span></h2>
           <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-            Liver cirrhosis, the final stage of chronic liver disease, ranks as the 11th leading cause of death globally, contributing to 2.4% of deaths worldwide. 
-            Our mission is to transform liver disease diagnosis through advanced AI technology, making precise segmentation and early detection accessible to healthcare providers.
+            Advanced AI is transforming modern healthcare, enabling earlier detection, precise segmentation, and improved clinical 
+            decision making. Our mission is to integrate state-of-the-art deep learning technologies into medical imaging workflows,
+            making high-accuracy analysis accessible to healthcare providers everywhere.
           </p>
           <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-            Leveraging the groundbreaking <span className="font-semibold text-foreground">nnSynergyNet3D architecture</span> developed at Northwestern University, 
-            our platform integrates continuous and discrete latent spaces to capture both fine-grained and coarse features in MRI scans. 
-            This synergistic approach enables accurate segmentation of cirrhotic livers, essential for monitoring disease progression, 
-            assessing severity, and evaluating treatment responses.
+            Building on innovative architectures such as nnSynergyNet3D, our platform unifies continuous and discrete latent representations 
+            to capture both fine-grained and global imaging features. This synergistic design enhances segmentation quality, supports reliable 
+            cross-modal generalization, and adapts seamlessly across CT and MRI data.
           </p>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            By combining cutting-edge deep learning with intuitive design, we're creating tools that empower medical professionals and researchers 
-            to achieve better outcomes in liver disease management. Our technology demonstrates superior cross-modal generalization, 
-            improving segmentation consistency across both CT and MRI modalities, ultimately easing clinical workflows.
+            Combining cutting-edge AI with intuitive user experience, we aim to equip clinicians and researchers with powerful tools that streamline workflows, 
+            support early diagnosis, and elevate the standard of patient care.
           </p>
         </div>
       </div>
@@ -190,12 +189,11 @@ const About = () => {
                   <div className="w-14 h-14 bg-gradient-to-br  rounded-xl flex items-center justify-center mr-4">
                     <span className="text-black dark:text-white text-3xl font-bold"><GiBrain/></span>
                   </div>
-                  <h3 className="text-2xl font-bold">nnSynergyNet3D Architecture</h3>
+                  <h3 className="text-2xl font-bold">3D Synergistic Modeling for Polyp</h3>
                 </div>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Our model leverages synergistic theory by integrating continuous and discrete latent spaces for 3D volumes. 
-                  This dual approach captures both fine-grained details and coarse features, enabling effective modeling of 
-                  intricate feature interactions in MRI scans.
+                  By combining continuous and discrete latent spaces, our architecture learns both fine-grained polyp details and overall colon morphology. 
+                  This synergy enhances segmentation accuracy and improves early detection of colorectal lesions.
                 </p>
               </CardContent>
             </Card>
@@ -206,12 +204,11 @@ const About = () => {
                   <div className="w-14 h-14 bg-gradient-to-br rounded-xl flex items-center justify-center mr-4">
                     <span className="text-black dark:text-white text-3xl font-bold"><VscGraphLine/></span>
                   </div>
-                  <h3 className="text-2xl font-bold">Proven Results</h3>
+                  <h3 className="text-2xl font-bold">Proven Performance</h3>
                 </div>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Validated on 628 high-resolution T1 abdominal MRI scans from 339 patients, our model outperforms 
-                  the baseline nnUNet3D by approximately 2%. Zero-shot testing on CT scans demonstrated superior 
-                  cross-modal generalization capabilities.
+                  Validated on a diverse multi-centre colonoscopy dataset, our model delivers improved polyp segmentation accuracy, outperforming established baselines such as nnUNet3D. 
+                  In zero-shot evaluations on unseen centres and imaging conditions
                 </p>
               </CardContent>
             </Card>
