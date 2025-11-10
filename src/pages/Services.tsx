@@ -29,18 +29,18 @@ const Services = () => {
 
   const services = [
     {
-      icon: BsUpload,
-      title: "Upload & Analyze",
-      description: "Upload your dental scans and get comprehensive AI-powered analysis and diagnosis.",
-      features: ["High-accuracy scanning", "Multiple format support", "Quick results"],
-      gradient: "from-blue-500 to-cyan-500"
-    },
-    {
       icon: CiChat1,
       title: "AI Chat Consultation",
       description: "Discuss your dental concerns with our AI assistant for personalized advice and guidance.",
       features: ["24/7 availability", "Personalized responses", "Treatment suggestions", "Follow-up care"],
       gradient: "from-green-500 to-teal-500"
+    },
+    {
+      icon: BsUpload,
+      title: "Upload & Analyze",
+      description: "Upload your dental scans and get comprehensive AI-powered analysis and diagnosis.",
+      features: ["High-accuracy scanning", "Multiple format support", "Quick results"],
+      gradient: "from-blue-500 to-cyan-500"
     }
   ];
 
