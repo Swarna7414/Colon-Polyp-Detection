@@ -1,0 +1,64 @@
+name: Deploy React app to GitHub Pages
+
+on:
+  push:
+    branches: [ Live ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm i
+          fi
+
+      - name: Build
+        run: npm run build
+
+      - name: Add 404 fallback
+        run: |
+          if [ -d dist ]; then cp dist/index.html dist/404.html; fi
+          if [ -d build ]; then cp build/index.html build/404.html; fi
+
+      - id: detect
+        run: |
+          if [ -d dist ]; then echo "dir=dist" >> $GITHUB_OUTPUT; fi
+          if [ -d build ]; then echo "dir=build" >> $GITHUB_OUTPUT; fi
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ steps.detect.outputs.dir }}
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

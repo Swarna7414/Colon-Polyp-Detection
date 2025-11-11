@@ -23,7 +23,7 @@ const Home = () => {
         <div className="space-y-8">
           <div className="space-y-4">
             <h1 className="md:text-6xl lg:text-7xl font-bold leading-tight">
-              <span className="text-5xl block bg-gradient-to-r dark:text-white text-blue-500 bg-clip-text">
+              <span className="text-5xl dark:text-white bg-gradient-to-r px-2 py-1 font-bold from-blue-500 to-blue-600 bg-clip-text text-transparent">
                 AI-Powered Colon Polyp Detection & Segmentation
               </span>
               <br />
