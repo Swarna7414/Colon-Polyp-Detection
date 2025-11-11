@@ -149,7 +149,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen }) => {
               </div>
               <div>
                 <h3 className="font-semibold">Jha</h3>
-                <p className="text-sm text-blue-100">Cirrhosis Detection Assistant</p>
+                <p className="text-sm text-blue-100">PolyP Detection Assistant</p>
               </div>
             </div>
             <div className="flex items-center space-x-2">
@@ -230,7 +230,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen }) => {
               value={inputMessage}
               onChange={(e) => setInputMessage(e.target.value)}
               onKeyPress={handleKeyPress}
-              placeholder="Ask me about dental health..."
+              placeholder="Ask me about Colon health..."
               className="flex-1"
               disabled={isLoading}
             />
