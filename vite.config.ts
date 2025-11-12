@@ -4,7 +4,7 @@ import path from "path";
 
 
 export default defineConfig(({ mode }) => ({
-  base: '/Colon Polyp Detection/',
+  base: '/Colon-Polyp-Detection/',
   server: {
     host: "::",
     port: 3000,

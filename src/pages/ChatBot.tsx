@@ -194,7 +194,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen }) => {
                   {message.role === 'user' ? (
                     <User className="h-4 w-4 text-white" />
                   ) : (
-                    <img src={Bounce} alt="Denti Jha" className="h-6 w-6" />
+                    <img src={Bounce} alt="Jha AI" className="h-6 w-6" />
                   )}
                 </div>
                 <div className={cn(
@@ -230,7 +230,7 @@ const ChatBot: React.FC<ChatBotProps> = ({ isOpen, setIsOpen }) => {
               value={inputMessage}
               onChange={(e) => setInputMessage(e.target.value)}
               onKeyPress={handleKeyPress}
-              placeholder="Ask me about Colon health..."
+              placeholder="Ask me about colon polyp detection..."
               className="flex-1"
               disabled={isLoading}
             />

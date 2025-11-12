@@ -12,20 +12,24 @@ export interface ChatResponse {
 }
 
 class ChatService {
-  private apiKey = import.meta.env.VITE_DEEPINFRA_API_KEY || 'W9bRJ6CQ6xjTMDzRJ8WALYMEuna0Rua1'; // DeepInfra API Key
+  private apiKey = import.meta.env.VITE_DEEPINFRA_API_KEY;
   private apiUrl = import.meta.env.VITE_DEEPINFRA_API_URL || 'https://api.deepinfra.com/v1/openai/chat/completions';
   private modelName = import.meta.env.VITE_DEEPINFRA_MODEL || 'meta-llama/Meta-Llama-3-8B-Instruct';
 
   private getSystemPrompt(): string {
-    return `You are Denti Jha, a dental health assistant. Give SHORT responses.
+    return `You are Jha, a colon polyp detection and colorectal health assistant. Give SHORT responses.
     
     Answer in at most 2 short sentences (max 50 words total). 
     Be clear and concise; no lists, no extra fluff. Always end with 'Consult a doctor for medical advice.' 
-    Focus only on dental health topics.`;
+    Focus only on colon health, polyp detection, and colonoscopy topics.`;
   }
 
   async sendMessage(message: string, conversationHistory: ChatMessage[] = []): Promise<ChatResponse> {
     try {
+      if (!this.apiKey) {
+        throw new Error('API key is not configured. Please set VITE_DEEPINFRA_API_KEY in your environment variables.');
+      }
+
       const messages = [
         { role: 'system', content: this.getSystemPrompt() },
         ...conversationHistory.map(msg => ({
@@ -73,7 +77,7 @@ class ChatService {
 
     } catch (error) {
       console.error('Chat service error:', error);
-      throw new Error('Failed to get response from Denti Jha. Please try again.');
+      throw new Error('Failed to get response from Jha AI. Please try again.');
     }
   }
 
@@ -90,7 +94,7 @@ class ChatService {
   // Get a welcome message for new users
   getWelcomeMessage(userName?: string): ChatResponse {
     return {
-      message: `Hello ${userName || 'there'}! I'm Jha, your AI Liver Diagnostic Assistant. I analyze liver scan data, help identify potential signs of cirrhosis, and provide insights to support better liver health. What would you like to know today?`,
+      message: `Hello ${userName || 'there'}! I'm Jha, your AI Colon Polyp Detection Assistant. I help with understanding polyp detection, colonoscopy procedures, and provide insights to support better colorectal health. What would you like to know today?`,
       role: 'assistant',
       timestamp: new Date(),
       isStreaming: false
@@ -100,7 +104,7 @@ class ChatService {
   
   getHelpMessage(): ChatResponse {
     return {
-      message: "I can help you with:\n• Liver health tips\n• Early signs of liver diseases\n• Cirrhosis prevention and management\n• Understanding your liver scan results\n\nJust ask me anything about liver health or diagnostics!",
+      message: "I can help you with:\n• Colon health tips\n• Early signs of colorectal issues\n• Polyp detection and prevention\n• Understanding colonoscopy results\n• Colorectal cancer screening\n\nJust ask me anything about colon health or polyp detection!",
       role: 'assistant',
       timestamp: new Date(),
       isStreaming: false
