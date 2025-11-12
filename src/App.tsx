@@ -67,12 +67,12 @@ const AppContent = () => {
         <div 
           className="bottom-8 right-10 transform -translate-x-1/2 fixed hidden lg:block cursor-pointer transition-transform duration-300"
           onClick={openChat}
-          title="Chat with DentiJha AI"
+          title="Chat with Jha AI"
         >
           <div className="animate-bounce">
             <img 
               src={Bounce}
-              alt="Chat with DentiJha AI" 
+              alt="Chat with Jha AI" 
               className="w-12 h-12 animate-pulse"
             />
           </div>
